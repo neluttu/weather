@@ -13,7 +13,157 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#edf2fe] flex items-center justify-center min-h-screen">
-	
+<body class="flex bg-[url(https://neluttu.github.io/weather/bg.jpg)] bg-cover bg-top items-center justify-center min-h-screen font-rubik">
+	<section class="w-full max-w-[640px] bg-white/10 backdrop-blur-md text-white">
+        <h1 class="p-5 mt-4 mb-10 text-4xl font-semibold leading-relaxed text-center drop-shadow-[5px_4px_2px_rgba(0,0,0,0.3)]">
+            <p class="text-xl font-light" id="date">Thrusday, 10:40 PM</p>
+            Havana
+        </h1>
+        <script>
+            function updateDateTime() {
+                const currentDate = new Date();
+                const day = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+                const time = currentDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric'});
+                const dateTimeString = `${day}, ${time}`;
+                document.getElementById('date').textContent = dateTimeString;
+            }
+            updateDateTime();
+        </script>
+        <ul class="flex items-center justify-center gap-10 px-6 mb-10">
+            <li class="w-full md:w-[40%]">
+                <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Sun-and-Moon-PNG/Moon_with_Clouds_PNG_Transparent_Clip_Art_Image.png?m=1507172110">
+            </li>
+            <li class="shrink-0 grow">
+                <div class="flex items-start justify-center gap-4">
+                    <span class="text-9xl">9</span>
+                    <div class="text-3xl">
+                        <span id="cel">&#176; C</span> | <span id="far" class="text-blue-300">&#176; F</span>
+                        <p class="text-xl">MIN 3 &#176; C</p>
+                    </div>
+                    
+                </div>
+                <ul class="flex items-center justify-center w-full py-3 text-xl bg-white/10">
+                    <li class="flex-1 px-4 text-center">
+                        <svg version="1.1" class="block mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" width="1em" height="auto" viewBox="0 0 512 512" fill="#64C8E8">
+                            <g id="droplet"></g><path d="M432.313 236.581c-32.877-91.72-102.555-174.075-176.313-236.581-73.758 62.506-143.435 144.861-176.313 236.581-20.332 56.718-22.341 118.281 6.292 172.7 32.923 62.57 99.316 102.719 170.021 102.719s137.098-40.149 170.020-102.72c28.635-54.419 26.625-115.981 6.293-172.699zM369.382 379.478c-21.901 41.626-66.406 68.522-113.382 68.522-27.56 0-54.262-9.268-76.056-25.326 6.621 0.862 13.316 1.326 20.056 1.326 58.713 0 114.334-33.607 141.701-85.621 22.439-42.646 20.489-86.924 11.941-122.169 7.279 14.075 13.453 28.099 18.424 41.966 11.303 31.531 20.012 78.17-2.684 121.302z"></path>
+                        </svg>
+                        93%
+                    </li>
+                    <li class="flex-1 px-4 text-center">
+                        <svg class="block mx-auto mb-3" height="1em" width="1em" version="1.1" id="Layer_1" fill="#64C8E8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                            <g><path style="fill:#64C8E8;" d="M391.217,235.56H36.404c-14.472,0-26.205-11.732-26.205-26.204
+                            c0-14.473,11.733-26.205,26.205-26.205h354.813c32.078,0,58.174-26.098,58.174-58.174s-26.098-58.174-58.174-58.174
+                            s-58.174,26.098-58.174,58.174c0,14.473-11.733,26.205-26.205,26.205c-14.472,0-26.205-11.732-26.205-26.205
+                            c0-60.976,49.608-110.584,110.584-110.584S501.801,64,501.801,124.976S452.193,235.56,391.217,235.56z"></path>
+                            <path style="fill:#64C8E8;" d="M391.217,497.608c-60.976,0-110.584-49.608-110.584-110.584c0-14.473,11.733-26.205,26.205-26.205
+                    c14.472,0,26.205,11.732,26.205,26.205c0,32.077,26.098,58.174,58.174,58.174s58.174-26.098,58.174-58.174
+                    s-26.098-58.174-58.174-58.174H36.404c-14.472-0.001-26.205-11.733-26.205-26.206c0-14.473,11.733-26.205,26.205-26.205h354.813
+                            c60.976,0,110.584,49.609,110.584,110.585S452.193,497.608,391.217,497.608z"></path></g>
+                            <g><path style="fill:#64C8E8" d="M391.217,245.759H36.404C16.331,245.759,0,229.429,0,209.356s16.331-36.404,36.404-36.404h354.813
+                            c26.454,0,47.975-21.522,47.975-47.976S417.67,77,391.217,77c-26.455,0-47.976,21.522-47.976,47.976
+                            c0,20.073-16.331,36.404-36.403,36.404c-20.074,0-36.404-16.331-36.404-36.404c0-66.6,54.183-120.783,120.784-120.783
+                            C457.817,4.193,512,58.376,512,124.976S457.817,245.759,391.217,245.759z M36.404,193.35c-8.825,0-16.006,7.18-16.006,16.006
+                            c0,8.825,7.18,16.006,16.006,16.006h354.813c55.352,0,100.385-45.033,100.385-100.385S446.57,24.592,391.217,24.592
+                            S290.831,69.625,290.831,124.977c0,8.825,7.18,16.006,16.006,16.006c8.824,0,16.005-7.18,16.005-16.006
+                            c0-37.701,30.672-68.374,68.374-68.374c37.701,0,68.373,30.672,68.373,68.374s-30.672,68.374-68.373,68.374L36.404,193.35
+                            L36.404,193.35z"></path>
+                            <path style="fill:#64C8E8;" d="M391.217,507.807c-66.601,0-120.784-54.183-120.784-120.783c0-20.073,16.331-36.404,36.404-36.404
+                    s36.403,16.331,36.403,36.404c0,26.454,21.522,47.976,47.976,47.976c26.454,0,47.975-21.522,47.975-47.976
+                    c0-26.454-21.522-47.976-47.975-47.976H36.404C16.331,339.048,0,322.718,0,302.644c0-20.074,16.331-36.404,36.404-36.404h354.813
+                    c66.6,0,120.783,54.183,120.783,120.783S457.817,507.807,391.217,507.807z M306.838,371.018c-8.825,0-16.006,7.18-16.006,16.006
+                    c0,55.352,45.033,100.385,100.386,100.385s100.384-45.033,100.384-100.385S446.57,286.639,391.217,286.639H36.404
+                    c-8.825,0-16.006,7.18-16.006,16.006s7.18,16.006,16.006,16.006h354.813c37.701,0,68.373,30.672,68.373,68.374
+                    S428.918,455.4,391.217,455.4c-37.702,0-68.374-30.672-68.374-68.374C322.843,378.199,315.662,371.018,306.838,371.018z"></path>
+                <path style="fill:#64C8E8" d="M171.621,153.518H24.874c-5.632,0-10.199-4.566-10.199-10.199s4.567-10.199,10.199-10.199h146.747
+                    c5.632,0,10.199,4.566,10.199,10.199S177.253,153.518,171.621,153.518z"></path>
+                <path style="fill:#64C8E8" d="M222.982,153.518h-7.337c-5.632,0-10.199-4.566-10.199-10.199s4.567-10.199,10.199-10.199h7.337
+                    c5.632,0,10.199,4.566,10.199,10.199S228.614,153.518,222.982,153.518z"></path>
+                <path style="fill:#64C8E8" d="M222.982,378.88H24.874c-5.632,0-10.199-4.566-10.199-10.199s4.567-10.199,10.199-10.199h198.108
+                    c5.632,0,10.199,4.566,10.199,10.199S228.614,378.88,222.982,378.88z"></path>
+                    </g>
+                    </svg>
+                        5 km/h
+                    </li>
+                    <li class="flex-1 px-4 text-center">
+                        <svg class="block mx-auto mb-3" width="1em" height="1em" viewBox="0 0 24 24" stroke="#64C8E8;" xmlns="http://www.w3.org/2000/svg" style="fill:#64C8E8;">
+                            <path d="M21 14.7C21 18.1794 19.0438 21 15.5 21C11.9562 21 10 18.1794 10 14.7C10 11.2206 15.5 3 15.5 3C15.5 3 21 11.2206 21 14.7Z" stroke="#64C8E8;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8 8.2C8 9.7464 7.11083 11 5.5 11C3.88917 11 3 9.7464 3 8.2C3 6.6536 5.5 3 5.5 3C5.5 3 8 6.6536 8 8.2Z" stroke="#64C8E8;" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        0%
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="flex items-center justify-between gap-1 px-6 mb-10">
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-1"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-2"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-3"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-4"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-5"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+            <li class="flex-1 p-2 text-center bg-white/10">
+                <span class="text-2xl" id="day-6"></span>
+                <svg class="block mx-auto mt-2" xmlns="2ttp://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#5bddff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878">
+                    </path>
+                </svg>
+                <p class="text-lg">15&#176; / 4&#176;</p>
+            </li>
+        </ul>
+        <script>
+            const today = new Date();
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            for (let i = 1; i <= 6; i++) {
+                const spanId = `day-${i}`;
+                const span = document.getElementById(spanId);
+                const date = new Date(today);
+                date.setDate(today.getDate() + i - 1);
+                const dayOfWeek = date.getDay();
+                const abbreviatedDay = dayNames[dayOfWeek];
+                span.textContent = abbreviatedDay;
+            }            
+        </script>
+    </section>
 </body>
 </html>
